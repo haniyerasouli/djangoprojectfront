@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_refrence %}
+
+{% endblock %}
+{% block page_content %}
+     <link rel="stylesheet" href="{% static 'learns/post_detail.css' %}">
+    <section id="detail">
+        <img src="{% static 'learns/image/'|add:post.image %}" alt="{{ post.title }}">
+    	<h1>{{post.title }}</h1>
+        <h2>{{ post.cost }}</h2>
+        <h2>{{ post.size }}</h2>
+        <p>{{ post.short_description }}</p>
+        <button id="button1" class="btn btn-outline-secondary" type="button" id="button-addon1">افزودن به سبد خرید</button>
+
+    </section>
+    <br>
+
+    <section id="coment">
+        <h2>نظر خود را درباره این محصول بنویسید</h2>
+        <div class="input-group mb-3">
+            <button id="button" class="btn btn-outline-secondary" type="button" id="button-addon1">ارسال</button>
+            <input id="input" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        </div>
+    </section>
+
+{% endblock %}

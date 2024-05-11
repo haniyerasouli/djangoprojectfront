@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block page_title %}
+	main page
+{% endblock %}
+{% block header_refrence %}
+    <link rel="stylesheet" href="{% static 'learns/index.css' %}">
+{% endblock %}
+{% block page_content %}
+
+{#	welcome to shop#}
+{#    {{ a}}#}
+{#    {{ data }}#}
+
+    <section id="welcome">
+        <header>
+            <center>
+                <img src="{% static 'learns/image/79b6e866aae5e296647bec14868df4f64b6a39e0_1670399742.jpg' %}">
+            </center>
+            <h1>best shoese</h1>
+            <p>.شخصیت انسانها از کفش هایشان پیداست</p>
+        </header>
+    </section>
+
+    <section id="latest_post">
+        <h1>جدیدترین ها</h1>
+
+    {% for i in latest %}
+        <li id="image">
+        {% include 'learns/includes/post.html' %}
+        </li>
+    {% endfor %}
+    </section>
+
+    <section id="about">
+        <h1>درباره ما</h1><br>
+        <p>فروشگاه کفش خوش پا</p>
+        <p>تلفن:09353694849</p>
+    </section>
+
+
+{% endblock %}

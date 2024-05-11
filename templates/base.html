@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head id="post">
+    <meta charset="UTF-8">
+    <title>
+       {% block page_title %}
+       	    page...
+       {% endblock %}
+    </title>
+    {% block header_refrence %}
+
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body id="first">
+<header id="main_navigation">
+    <h1 ><a style="text-decoration-line: none"  href="{% url 'stating_page' %}">صفحه اصلی</a></h1>
+    <nav>
+        <h2><a style="text-decoration-line: none" href="{% url 'post_page' %}"}>محصولات</a></h2>
+    </nav>
+</header>
+    {% block page_content %}
+    	my site
+    {% endblock %}
+
+    {% block footer_refrence %}
+    	uniq
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}
+	محصولات
+{% endblock %}
+
+{% block header_refrence %}
+    <h1 id="header">خوش آمدید</h1>
+    <link rel="stylesheet" href="{% static 'learns/all_post.css' %}">
+
+
+        {% for i in all_posts %}
+            <li>>
+            {% include 'learns/includes/post.html' %}
+            </li>
+
+        {% endfor %}
+{% endblock %}
+
+{% block page_content %}
+
+{% endblock %}
